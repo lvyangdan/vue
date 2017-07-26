@@ -1,0 +1,5 @@
+7.17：react的props和state属性，
+7.18：gitbook笔记上传和github,装linux系统
+7.19：redux
+7.20：redux的三大概念：reducer（执行函数） action（触发reducer的行为） store（数据存储和修改的数据仓库）
+7.21：北京创业大街

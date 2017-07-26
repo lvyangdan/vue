@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>菜鸟教程 React 实例</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+	<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+	<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+    var Arr=[<h1>1111</h1>,<h2>22222</h2>]
+      var myStyle = {
+         fontSize: 20,
+         color: 'black',
+         width:500,
+         backgroundColor:"pink"
+      };
+      ReactDOM.render(
+      	<h1 style = {myStyle}>{Arr}</h1>,
+      	document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
