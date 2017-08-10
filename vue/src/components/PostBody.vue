@@ -1,13 +1,25 @@
 <template>
   <div class="post-body">
-    {{postid}}
+      <div v-if='isEmpty'>
+        <p>加载中.........</p>
+      </div>
+      <div v-else>
+        <p>你的文章已有<span>{{comments.length}}</span>评论</p>
+      </div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'post-body',
-    props: ['postid']
+    computed: {
+      comments: function () {
+        return this.$store.state.comment.all
+      },
+      isEmpty: function () {
+        return this.$store.state.comment.all.lenght === 0
+      }
+    }
   }
 </script>
 
@@ -20,5 +32,9 @@
     margin: 30px auto;
     padding: 20px;
     line-height: 1.8;
+   }
+   span{
+    color:red;
+    font-size:30px;
    }
 </style>
