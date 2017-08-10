@@ -17,7 +17,7 @@
         return this.$store.state.comment.all
       },
       isEmpty: function () {
-        return this.$store.state.comment.all.lenght === 0
+        return this.$store.state.comment.all.length === 0
       }
     }
   }
