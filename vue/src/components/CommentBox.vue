@@ -13,31 +13,26 @@
 </template>
 
 <script>
+  import * as types from '../store/mutation-types'
   export default {
     name: 'comment-box',
-    data: () => ({
-      comments: [
-        {
-          text: 'hello git'
-        },
-        {
-          text: 'hello vuejs'
-        }
-      ]
-    }),
     computed: {
       reversedComments: function () {
         return this.comments.slice().reverse()
+      },
+      comments: function () {
+        return this.$store.state.comment.all
       }
     },
     methods: {
       addComment: function () {
-        const text = document.getElementById('commentForm').value
-        if (text !== '') {
-          this.comments.push({ text })
-          document.getElementById('commentForm').value = ''
-        }
+        const input = document.getElementById('commentForm')
+        this.$store.commit(types.ADD_COMMENT, { text: input.value })
+        input.value = ''
       }
+    },
+    created () {
+      this.$store.dispatch('getAllPosts')
     }
   }
 </script>
