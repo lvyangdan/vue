@@ -25,5 +25,8 @@
 		height: 180px;
 		background-color: #FFAB91;
 		margin: 0 auto;
+		text-align: center;
+		font-size:30px;
+		box-shadow: 5px 5px 0 rgba(0,0,0,0.5)
 	}
 </style>
